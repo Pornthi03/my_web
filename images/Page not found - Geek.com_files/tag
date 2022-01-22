@@ -1,0 +1,33 @@
+(function(w, d, s) {
+  try {
+    d = w.top.document || d; w = w.top.document ? w.top : w;
+  } catch (e) {}
+  var ttag = function() {
+    var _tt_minSlot = 3,
+_tt_slot = window.top.document.querySelectorAll('.articleinfo article > p, .content-wrapper > p');
+if (_tt_slot.length < 3) {
+	_tt_minSlot = 2;
+}
+if (_tt_slot.length < 2) {
+	_tt_minSlot = 1;
+}
+    w.teads.ad(108437, {
+	"settings": {
+		"components": {
+			"endScreen": {
+				"display": false
+			},
+			"credits": {
+				"display": false
+			}
+		}
+	}
+}).page(100127).placement(108437, {"css":"margin: 0px auto 20px; max-width: 550px; width: 100%;","format":"inread","slot":{"selector":".articleinfo article > p, .content-wrapper > p","minimum":_tt_minSlot}}).serve();
+  };
+  if (w.teads && w.teads.page) { ttag(); }
+  else if (!w.teadsscript) {
+    var protocol = w.location.protocol.match(/^https?:$/) ? w.location.protocol : 'https:';
+    s.src = protocol + '//a.teads.tv/media/format/v3/teads-format.min.js';
+    s.async = true; s.onload = ttag; w.teadsscript = d.getElementsByTagName('head')[0].appendChild(s);
+  }
+})(window, document, document.createElement('script'));
